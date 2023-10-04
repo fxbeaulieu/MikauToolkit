@@ -7,7 +7,7 @@ function New-SDPrompt
 {
 	param(
 		[Parameter(Mandatory)]
-		[ValidateSet(WebUI,API)]
+		[ValidateSet('WebUI','API')]
 		[string]
 		$OutputType
 	)
