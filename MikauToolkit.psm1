@@ -126,4 +126,20 @@ function Invoke-MSIExtractFromEXE{
 	&"$EXEFullPath" /s /x /b"$OutputPath" /v/qn
 }
 
+function Install-MikauToolkit {
+	$MikauToolkit = "C:\Users\fxbeaulieu\Documents\git-repo\MikauToolkit"
+	$PowerShellModulesPaths = @(
+		"C:\Users\fxbeaulieu\Documents\PowerShell\Modules\",
+		"C:\Program Files\PowerShell\7\Modules\",
+		"C:\Users\fxbeaulieu\Documents\WindowsPowerShell\Modules\",
+		"C:\Program Files (x86)\WindowsPowerShell\Modules\",
+		"C:\Program Files\WindowsPowerShell\Modules\"
+	)
+
+	Foreach($ModulePath in $PowerShellModulesPaths)
+	{
+		Copy-Item -Path $MikauToolkit -Destination $ModulePath -Recurse -Force
+	}
+}
+
 Export-ModuleMember -Function * -Alias *
