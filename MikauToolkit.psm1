@@ -5,7 +5,20 @@ function Start-SD
 
 function New-SDPrompt
 {
-	A:\sd_prompt\New-SDPrompt.ps1 -Generate
+	param(
+		[Parameter(Mandatory)]
+		[ValidateSet(WebUI,API)]
+		[string]
+		$OutputType
+	)
+	if($OutputType -eq "WebUI")
+	{
+		A:\sd_prompt\New-SDPrompt.ps1 -Generate -WebUI
+	}
+	if($OutputType -eq "API")
+	{
+		A:\sd_prompt\New-SDPrompt.ps1 -Generate -API
+	}
 }
 
 function Set-DiscordSDPresenceMessage{
