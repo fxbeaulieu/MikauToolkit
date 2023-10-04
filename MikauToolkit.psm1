@@ -30,6 +30,44 @@ param(
 	C:\Users\fxbeaulieu\Documents\git-repo\Set-TeamsPresenceMessage\Set-PresenceMessage.ps1 -PresenceMessage $Message -Expiration $NumberOfDays
 }
 
+function Invoke-ValidatedElevatedExec
+{
+    [CmdletBinding()]
+    param (
+        [Parameter(Mandatory)]
+        [string]
+        $Global:ExecuteThisFileAsAdmin
+    )
+
+    function Start-Exec
+    {
+        & $Global:ExecuteThisFileAsAdmin
+    }
+
+    function Find-ExecPath
+    {
+        if (Test-Path $Global:ExecuteThisFileAsAdmin)
+        {
+            Start-Exec
+        }
+    }
+    function Get-TerminalSessionElevationState
+    {
+        $CurrentUserIdentity = [System.Security.Principal.WindowsIdentity]::GetCurrent()
+        $CurrentSecurityPrincipal = New-Object System.Security.Principal.WindowsPrincipal($CurrentUserIdentity)
+        $IsAdmin = $CurrentSecurityPrincipal.IsInRole([System.Security.Principal.WindowsBuiltInRole]::Administrator)
+        if (! $IsAdmin)
+        {
+            Write-Host -ForegroundColor Yellow "La session PowerShell n'est pas exécutée en tant qu'administrateur. Vous devrez approuver le UAC pour l'élever avant que le script puisse s'exécuter."
+            Start-Process 'powershell.exe' -WorkingDirectory "$PSScriptRoot" -ArgumentList "$PSCommandPath" -Verb RunAs
+            Return
+        }
+        Find-ExecPath
+    }
+
+    Get-TerminalSessionElevationState
+}
+
 function Start-SSHKeysImport {
     param(
     #Fournir la paire d'infos requises avec le user distant en premier et le IP du serveur en deuxieme
