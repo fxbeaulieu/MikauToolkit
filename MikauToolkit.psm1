@@ -8,7 +8,7 @@ function New-SDPrompt
 	param(
 		[Parameter(Mandatory)]
 		[ValidateSet(WebUI,API)]
-		[string]
+		[switch]
 		$OutputType
 	)
 	if($OutputType -eq "WebUI")
