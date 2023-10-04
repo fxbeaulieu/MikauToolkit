@@ -7,18 +7,20 @@ function New-SDPrompt
 {
 	param(
 		[Parameter(Mandatory)]
-		[ValidateSet('WebUI','API')]
 		[string]
 		$OutputType
 	)
 	if($OutputType -eq "WebUI")
 	{
 		A:\sd_prompt\New-SDPrompt.ps1 -Generate -WebUI
+		exit
 	}
 	if($OutputType -eq "API")
 	{
 		A:\sd_prompt\New-SDPrompt.ps1 -Generate -API
+		exit
 	}
+	Write-Host -ForegroundColor Red "Vous n'avez pas choisi un output type valide."
 }
 
 function Set-DiscordSDPresenceMessage{
