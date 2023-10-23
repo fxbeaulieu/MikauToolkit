@@ -1,0 +1,60 @@
+ModuleType Version    PreRelease Name                                PSEdition ExportedCommands
+---------- -------    ---------- ----                                --------- ----------------
+Script     0.5.1                 AnyBox                              Desk      {Get-Base64, Get-DictSubset, New-AnyBoxPrompt, ConvertTo-AnyBoxPrompts…}
+Script     10.3.0                Az                                  Core,Desk
+Binary     2.0.2.182             AzureAD                             Desk
+Script     0.8.5                 BurntToast                          Desk      {Get-BTHistory, New-BTAction, New-BTAppId, New-BTAudio…}
+Script     2.10.2                Carbon                              Desk      {Add-CGroupMember, Add-CIisDefaultDocument, Add-CTrustedHost, Assert-CAdminPrivilege…}
+Script     1.7                   ChocolateyTools                     Desk      {New-ChocolateyPackage, Publish-ChocolateyPackage, Test-ChocolateyPackage}
+Binary     2.0                   CredentialManager                   Desk
+Script     3.3.0                 ExchangeOnlineManagement            Desk      {Add-VivaModuleFeaturePolicy, Get-ConnectionInformation, Get-DefaultTenantBriefingConfig, Get-DefaultTenantMyAnalyticsFeatureConfig…}
+Script     1.0.1.36              Find.Uninstaller                    Desk      Get-UninstallString
+Script     2.4.0                 gsudoModule                         Desk      {gsudo, invoke-gsudo, Test-IsGsudoCacheAvailable, Test-IsProcessElevated…}
+Script     7.8.6                 ImportExcel                         Desk      {Add-ConditionalFormatting, Add-ExcelChart, Add-ExcelDataValidationRule, Add-ExcelName…}
+Script     3.1.5                 Invoke-CommandAs                    Desk      Invoke-CommandAs
+Script     2.0.3                 Join-Object                         Desk      Join-Object
+Script     0.1.0                 kmt.winget.autocomplete             Desk
+Binary     2.0.0.1762            Microsoft.Azure.ActiveDirectory.PI… Desk      {Connect-PimService, Disable-PrivilegedRoleAssignment, Disconnect-PimService, Enable-PrivilegedRoleAssignment…}
+Manifest   2.6.1                 Microsoft.Graph                     Core,Desk
+Script     2.6.1                 Microsoft.Graph.Beta		     Core,Desk {Add-MgBetaUserChatMember, Add-MgBetaUserDriveListContentTypeCopy, Add-MgBetaUserDriveListContentTypeCopyFromContentTypeHub, Add-MgBetaUserPendingAccessReviewInstanceDecis…
+Binary     16.0.2412…            Microsoft.Online.SharePoint.PowerS… Desk
+Binary     0.7.2                 Microsoft.PowerShell.ConsoleGuiToo… Core      {Out-ConsoleGridView, ocgv}
+Script     5.1.0                 MicrosoftTeams                      Core,Desk {Add-TeamChannelUser, Add-TeamUser, Connect-MicrosoftTeams, Disconnect-MicrosoftTeams…}
+Manifest   1.1.183.66            MSOnline                            Desk
+Script     0.0                   MikauToolkit                        Desk      {Start-O4GPT, Install-MikauToolkit, Set-DiscordSDPresenceMessage, Start-SSHKeysImport…}
+Script     4.10.1                Pester                              Desk      {Describe, Context, It, Should…}
+Manifest   2.1.3.0               PoShKeePass                         Desk      {New-KeePassEntry, Get-KeePassEntry, Update-KeePassEntry, Remove-KeePassEntry…}
+Script     1.0.77                PowerShell.Module.InvokeWinGet      Desk      {Get-InstalledSoftware, Get-WinGetExePath, Get-WinGetVersion, Invoke-PSWinGet…}
+Script     1.0.8                 ps-menu                             Desk      Menu
+Script     1.0.12                ps2exe                              Desk      {Invoke-PS2EXE, ps2exe, ps2exe.ps1, Win-PS2EXE…}
+Script     0.10.0                PScribo                             Desk      {BlankLine, Document, DocumentOption, Export-Document…}
+Binary     0.0.6                 psedit                              Desk      {Show-PSEditor, psedit}
+Manifest   0.0.1                 PSFeedHandler                       Desk      {Start-PSFeedHandler, PSFH, PSFeedHandler}
+Script     1.9.310               PSFramework                         Desk      {ConvertTo-PSFHashtable, Invoke-PSFCallback, Invoke-PSFProtectedCommand, Remove-PSFNull…}
+Script     0.15.240              PSGitHub                            Desk      {Invoke-GitHubGraphQlApi, Get-GitHubRateLimit, Set-GitHubToken, Get-GitHubUser…}
+Script     1.1                   psInlineProgress                    Desk      Write-InlineProgress
+Script     0.67.1                PSKoans                             Core,Desk {Get-Blank, Get-Karma, Get-PSKoan, Get-PSKoanLocation…}
+Script     1.0.1                 PSMD.OpenAI                         Desk      {Add-PsmdOaiFunctionHelp, Connect-PsmdOpenAI, Get-PsmdOaiCompletion, Get-PsmdOaiHelp}
+Script     2.2.11.146            PSModuleDevelopment                 Desk      {Convert-PSMDMessage, Expand-PSMDTypeName, Export-PSMDString, Find-PSMDFileContent…}
+Script     1.0.2                 PSReadExif                          Desk      {Add-ExifData, Get-ExifData, Get-ExifTag}
+Script     1.21.0                PSScriptAnalyzer                    Desk      {Get-ScriptAnalyzerRule, Invoke-ScriptAnalyzer, Invoke-Formatter}
+Script     1.0.1                 PSScriptMenuGui                     Desk      {Show-ScriptMenuGui, New-ScriptMenuGuiExample}
+Script     2.4.0                 PSTeams                             Core,Desk {ConvertTo-TeamsFact, ConvertTo-TeamsSection, New-AdaptiveAction, New-AdaptiveActionSet…}
+Script     2.2.35                PSUtil                              Desk      {Backup-PSULocation, Convert-PSUObject, Expand-PSUObject, Get-PSUCalendarWeek…}
+Script     1.0.4                 PSWinDocumentation.O365HealthServi… Core,Desk Get-Office365Health
+Script     1.0.0.7               PSWinGet                            Desk      {Convert-WinGetOutput, Find-WinGetPackage, Get-WinGetPackage, Install-WinGetPackage…}
+Script     1.0.1                 PSWriteColor                        Core,Desk {Write-Color, Write-Colour}
+Script     1.10.0                PSWriteHTML                         Core,Desk {Add-HTML, Add-HTMLScript, Add-HTMLStyle, ConvertTo-CascadingStyleSheets…}
+Script     0.1.0                 PSWriteOffice                       Core,Desk {Close-OfficeWord, ConvertFrom-HTMLtoWord, Export-OfficeExcel, Get-OfficeExcel…}
+Script     0.0.20                PSWritePDF                          Core,Desk {Close-PDF, Get-PDF, Get-PDFDetails, Get-PDFFormField…}
+Script     1.0.0                 psyml                               Core,Desk {ConvertTo-Yaml, ConvertFrom-Yaml}
+Script     0.3.10                RoughDraft                          Desk      {Get-FFMpeg, Join-Media, Use-FFPlay, Set-Media…}
+Script     1.5                   ShowUI                              Desk      {Get-PowerShellDataSource, ConvertTo-ISEAddOn, Test-Descendent, ConvertTo-GridLength…}
+Script     0.0.35                SPReplicator                        Desk      {Add-SPRColumn, Add-SPRListItem, Add-SPRListItemFile, Add-SPRUser…}
+Script     22.0.59               SqlServer                           Core,Desk {Add-RoleMember, Add-SqlAvailabilityDatabase, Add-SqlAvailabilityGroupListenerStaticIp, Add-SqlAzureAuthenticationContext…}
+Script     1.1.3                 string                              Desk      {Add-String, Get-SubString, Format-String, Set-String…}
+Script     1.0.3                 TeamsBot                            Desk      {Send-TeamsBotMessage, New-TeamsBotCard, Set-TeamsBotWebhookUrl, Clear-TeamsBotWebhookUrl}
+Script     0.11.0                Terminal-Icons                      Desk      {Add-TerminalIconsColorTheme, Add-TerminalIconsIconTheme, Format-TerminalIcons, Get-TerminalIconsColorTheme…}
+Binary     0.0.1                 TerminalGuiDesigner                 Desk      Show-TuiDesigner
+Manifest   5.0                   WindowsAutoPilotIntune              Desk      {Add-EnrollmentStatusPage, Set-AutopilotProfileAssignedGroup, Set-AutopilotProfile, BoolToString…}
+
