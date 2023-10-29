@@ -5,22 +5,8 @@ function Start-SD
 
 function New-SDPrompt
 {
-	param(
-		[Parameter(Mandatory)]
-		[string]
-		$OutputType
-	)
-	if($OutputType -eq "WebUI")
-	{
-		A:\sd_prompt\New-SDPrompt.ps1 -Generate -WebUI
-		exit
-	}
-	if($OutputType -eq "API")
-	{
-		A:\sd_prompt\New-SDPrompt.ps1 -Generate -API
-		exit
-	}
-	Write-Host -ForegroundColor Red "Vous n'avez pas choisi un output type valide."
+	Set-Location -Path A:\sd_prompt\New-ImageGeneration
+	python.exe .\New-ImageGeneration.py
 }
 
 function Set-DiscordSDPresenceMessage{
@@ -128,8 +114,16 @@ function Invoke-MSIExtractFromEXE{
 	&"$EXEFullPath" /s /x /b"$OutputPath" /v/qn
 }
 
+function Install-O4GPTCurrentDevBuild {
+	D:\test_env\Install-O4GPTCurrentDevBuild.ps1
+}
+
+function Start-O4GPTDevBuild {
+	&"C:\Users\fxbeaulieu\Documents\Homemade Tools\o4gpt_core\Start-O4GPT.ps1"
+}
+
 function Install-MikauToolkit {
-	$MikauToolkit = "C:\Users\fxbeaulieu\Documents\git-repo\MikauToolkit"
+	$MikauToolkit = "D:\git-repo\MikauToolkit"
 	$PowerShellModulesPaths = @(
 		"C:\Users\fxbeaulieu\Documents\PowerShell\Modules\",
 		"C:\Program Files\PowerShell\7\Modules\",
